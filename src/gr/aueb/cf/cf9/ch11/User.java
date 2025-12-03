@@ -11,6 +11,10 @@ public class User {
     private String password;
     private boolean active;
 
+    public User(){
+
+    }
+
     public User(long id, String firstname, String lastname, String username, String password, boolean active) {
         this.id = id;
         this.firstname = firstname;
