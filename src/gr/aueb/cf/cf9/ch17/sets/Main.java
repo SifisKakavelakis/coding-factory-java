@@ -14,6 +14,7 @@ public class Main {
         bag.add("orange");
         bag.add("apple");       // No duplicates alloed
 
+        // Time-complexity O(1)
         if (bag.contains("apple")) {        // override equals
             bag.remove("apple");
         } else {
