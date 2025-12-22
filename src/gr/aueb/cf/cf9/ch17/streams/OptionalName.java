@@ -24,7 +24,7 @@ public class OptionalName {
         Product product = products.stream()
                 .filter(p -> p.getPrice() >= 20)
                 .findFirst()
-                .orElseThrow(() -> new Exception("No product found");
+                .orElseThrow(() -> new Exception("No product found"));
 
     }
 }
