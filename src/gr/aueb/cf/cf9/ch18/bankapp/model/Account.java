@@ -4,11 +4,11 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Account {
-
     private String iban;
     private BigDecimal balance;
 
     public Account() {
+
     }
 
     public Account(String iban, BigDecimal balance) {
@@ -43,7 +43,8 @@ public class Account {
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof Account account)) return false;
-        return Objects.equals(this.getIban(), account.getIban());
+        return Objects.equals(this.getIban(), account.getIban());   // null safe
+        //return this.iban.equals(account.iban);  // not null safe
     }
 
     @Override

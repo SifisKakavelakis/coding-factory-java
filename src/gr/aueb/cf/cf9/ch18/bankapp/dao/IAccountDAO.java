@@ -9,8 +9,9 @@ public interface IAccountDAO {
     Account saveOrUpdate(Account account);
     void remove(String iban);
     Optional<Account> findByIban(String iban);
-    List<Account> findAllAccount();
-    // Queries
-    boolean isAccountExist(String iban);
+    List<Account> getAllAccounts();
+    long count();
 
+    // Queries
+    boolean isAccountExists(String iban);
 }

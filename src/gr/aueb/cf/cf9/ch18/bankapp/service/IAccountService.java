@@ -5,14 +5,15 @@ import gr.aueb.cf.cf9.ch18.bankapp.core.exceptions.AccountNotFoundException;
 import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountDepositDTO;
 import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountInsertDTO;
 import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountReadOnlyDTO;
+import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountWithdrawDTO;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 public interface IAccountService {
-    AccountReadOnlyDTO createNewAcount(AccountInsertDTO insertDTO);
+    AccountReadOnlyDTO createNewAccount(AccountInsertDTO insertDTO);
     void deposit(AccountDepositDTO depositDTO) throws AccountNotFoundException;
-    void withdraw(AccountDepositDTO depositDTO) throws InsufficientBalanceException, AccountNotFoundException;
+    void withdraw(AccountWithdrawDTO withdrawDTO) throws InsufficientBalanceException, AccountNotFoundException;
     BigDecimal getBalance(String iban) throws AccountNotFoundException;
-    List<AccountReadOnlyDTO> getAllAccount();
+    List<AccountReadOnlyDTO> getAllAccounts();
 }
