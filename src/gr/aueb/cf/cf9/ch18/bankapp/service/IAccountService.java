@@ -1,6 +1,6 @@
 package gr.aueb.cf.cf9.ch18.bankapp.service;
 
-import gr.aueb.cf.cf9.ch14.bank_app.InsufficientBalanceException;
+import gr.aueb.cf.cf9.ch18.bankapp.core.exceptions.InsufficientBalanceException;
 import gr.aueb.cf.cf9.ch18.bankapp.core.exceptions.AccountNotFoundException;
 import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountDepositDTO;
 import gr.aueb.cf.cf9.ch18.bankapp.dto.AccountInsertDTO;
